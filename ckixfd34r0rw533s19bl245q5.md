@@ -59,7 +59,7 @@ $ sudo apt install gparted
 - Right-Click on your Swap Partition and choose *Information*. You should see the **path** and **UUID** listed there. Keep this open for further reference.
 ![gparted.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1608482368603/6R8q8t5ZA.png)
 
-3. Run sudo gedit /etc/fstab and the below code in it.You can either use the path or the UUID to tell Linux where  to find you swap partition. I recommend UUID because it'll stay constant even if you move the partition around or the disk somehow becomes sdb instead of sda or something like that. Make the appropriate edits and save the file.
+- Run sudo gedit /etc/fstab and the below code in it.You can either use the path or the UUID to tell Linux where  to find you swap partition. I recommend UUID because it'll stay constant even if you move the partition around or the disk somehow becomes sdb instead of sda or something like that. Make the appropriate edits and save the file.
 
 > UUID=41e86209-3802-424b-9a9d-d7683142dab7 none swap sw 0 0
 >
@@ -164,7 +164,7 @@ $ sudo swapoff -v /swapfile
 
 - Next, remove the swap file entry /swapfile swap swap defaults 0 0 form the /etc/fstab file.
 
-- Finally, removej the actual swapfile using the **rm** command:
+- Finally, remove the actual swapfile using the **rm** command:
 
 
 ```
